@@ -68,7 +68,7 @@ const matchingSkills = Array.from(matchingSkillsSet);
             data: skillMatchScore,
             matchingWords:matchingSkills,
             pdfdata: newPdfData,
-            resumeSkills:resumeSkills,
+            resumeSkills:jobSkillsSet,
             message: "Resume matched successfully"
         });
     } catch (err) {
