@@ -5,6 +5,7 @@ const pdfRoutes = require("./routes/pdfRoutes");
 const bodyParser = require('body-parser');
 const fileUpload = require('express-fileupload');
 const cors = require('cors');
+const skillRoutes = require("./routes/skillRoutes");
 
 const app = express();
 
@@ -21,5 +22,7 @@ app.use(express.json());
 connectDB();
 
 app.use('/api/v1', jobRoutes);
+app.use('/api', skillRoutes);
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
